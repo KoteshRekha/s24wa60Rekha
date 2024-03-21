@@ -1,13 +1,9 @@
 var express = require('express');
 var router = express.Router();
-let factor= 1;
-let product = 1;
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  factor++;
-  product = product*factor;
-  res.send(`Product is ${product}`);
-});
 
+/* GET home page. */
+router.get('/', function(req, res, next) {
+  res.render('mydata', { title: 'Kotesh Rekha' });
+});
 
 module.exports = router;
